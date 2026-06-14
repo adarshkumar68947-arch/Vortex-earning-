@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#05060a" />
+    <title>VORTEX QUANTUM DIGITAL CAPITAL</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-body">
+
+    <!-- Background grid + accents -->
+    <div class="bg-grid"></div>
+    <div class="bg-aurora aurora-1"></div>
+    <div class="bg-aurora aurora-2"></div>
+    <div class="bg-aurora aurora-3"></div>
+
+    <!-- Brand Header -->
+    <header class="brand-header">
+        <div class="brand-logo">
+            <span class="logo-mark">V<span class="logo-dot">Q</span></span>
+            <div class="logo-text">
+                <h1>VORTEX QUANTUM</h1>
+                <p>DIGITAL CAPITAL CONSOLE</p>
+            </div>
+        </div>
+        <div class="brand-tagline">Institutional Liquidity · Quantitative Yield · Global Access</div>
+    </header>
+
+    <!-- Auth Card -->
+    <main class="auth-shell">
+        <section class="auth-card">
+
+            <!-- Tabs -->
+            <nav class="auth-tabs" id="authTabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+                <button class="auth-tab" data-tab="forgot">Recover</button>
+                <span class="tab-slider" id="tabSlider"></span>
+            </nav>
+
+            <!-- Panels Wrapper -->
+            <div class="auth-panels" id="authPanels">
+
+                <!-- LOGIN -->
+                <form class="auth-panel active" id="loginPanel" autocomplete="off">
+                    <h2 class="panel-title">Secure Access Gateway</h2>
+                    <p class="panel-sub">Authenticate via global Firebase identity layer.</p>
+
+                    <label class="field">
+                        <span class="field-label">Phone Number</span>
+                        <div class="phone-input">
+                            <span class="phone-prefix">+91</span>
+                            <input type="tel" id="loginPhone" maxlength="10" inputmode="numeric" placeholder="10-digit mobile" required />
+                        </div>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Secure Password</span>
+                        <input type="password" id="loginPassword" placeholder="Enter encrypted passphrase" minlength="6" required />
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Verification Puzzle <em id="loginCaptchaText">— + — = ?</em></span>
+                        <input type="number" id="loginCaptcha" placeholder="Solve math captcha" required />
+                    </label>
+
+                    <button type="submit" class="primary-btn">
+                        <span>Initialize Session</span>
+                        <i class="arrow">→</i>
+                    </button>
+                </form>
+
+                <!-- REGISTER -->
+                <form class="auth-panel" id="registerPanel" autocomplete="off">
+                    <h2 class="panel-title">New Investor Onboarding</h2>
+                    <p class="panel-sub">Provision a global cloud-bound trading identity.</p>
+
+                    <label class="field">
+                        <span class="field-label">Phone Number</span>
+                        <div class="phone-input">
+                            <span class="phone-prefix">+91</span>
+                            <input type="tel" id="regPhone" maxlength="10" inputmode="numeric" placeholder="10-digit mobile" required />
+                        </div>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Create Password</span>
+                        <input type="password" id="regPassword" placeholder="Minimum 6 characters" minlength="6" required />
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Referral Code <em>(optional)</em></span>
+                        <input type="text" id="regReferral" placeholder="Sponsor user ID" />
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Verification Puzzle <em id="regCaptchaText">— + — = ?</em></span>
+                        <input type="number" id="regCaptcha" placeholder="Solve math captcha" required />
+                    </label>
+
+                    <button type="submit" class="primary-btn">
+                        <span>Create Vault Identity</span>
+                        <i class="arrow">→</i>
+                    </button>
+                </form>
+
+                <!-- FORGOT -->
+                <form class="auth-panel" id="forgotPanel" autocomplete="off">
+                    <h2 class="panel-title">Recovery Protocol</h2>
+                    <p class="panel-sub">Initiate secure credential restoration channel.</p>
+
+                    <label class="field">
+                        <span class="field-label">Registered Phone</span>
+                        <div class="phone-input">
+                            <span class="phone-prefix">+91</span>
+                            <input type="tel" id="forgotPhone" maxlength="10" inputmode="numeric" placeholder="10-digit mobile" required />
+                        </div>
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">New Password</span>
+                        <input type="password" id="forgotPassword" placeholder="New secure passphrase" minlength="6" required />
+                    </label>
+
+                    <label class="field">
+                        <span class="field-label">Verification Puzzle <em id="forgotCaptchaText">— + — = ?</em></span>
+                        <input type="number" id="forgotCaptcha" placeholder="Solve math captcha" required />
+                    </label>
+
+                    <button type="submit" class="primary-btn">
+                        <span>Dispatch Recovery</span>
+                        <i class="arrow">→</i>
+                    </button>
+                    <p class="hint-row">Recovery requests are processed by the compliance desk within 24 working hours.</p>
+                </form>
+
+            </div>
+
+            <footer class="auth-footer">
+                <small>© 2026 Vortex Quantum Digital Capital · Encrypted via Firebase Cloud Infrastructure</small>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Floating Help Widget -->
+    <button class="help-fab" id="helpFab" aria-label="Help">
+        <span>?</span>
+    </button>
+
+    <div class="help-window" id="helpWindow" hidden>
+        <div class="help-head">
+            <h3>Corporate Help Desk</h3>
+            <button class="help-close" id="helpClose">×</button>
+        </div>
+        <div class="help-body">
+            <div class="help-row">
+                <span class="help-tag">Operational Office</span>
+                <p id="helpAddress">—</p>
+            </div>
+            <div class="help-row">
+                <span class="help-tag">Registration No.</span>
+                <p id="helpRegNo">—</p>
+            </div>
+            <div class="help-row">
+                <span class="help-tag">Support Routing Channel</span>
+                <p id="helpEmail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8efdfbfefee1fcfacef8e1fcfaebf6fffbefe0fafbe3a0e7e1">[email&#160;protected]</a></p>
+            </div>
+            <div class="help-foot">
+                Customer assistance is routed via encrypted multi-tier ticket pipelines for institutional integrity.
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast / Popup Mount -->
+    <div id="popupMount"></div>
+    <div id="loaderMount" hidden>
+        <div class="loader-ring"></div>
+        <p>Synchronising with cloud ledger…</p>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
